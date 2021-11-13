@@ -5,19 +5,25 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import bimbetov.com.example.charity.R
+import bimbetov.com.example.charity.databinding.ActivityMainBinding
 import bimbetov.com.example.charity.repository.FakeFundRepository
 import bimbetov.com.example.charity.repository.FundRepository
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val repository: FundRepository = FakeFundRepository()
 
-        val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = FundAdapter(repository.getFund())
+        with(binding.recyclerView){
+            layoutManager = LinearLayoutManager(context)
+            adapter =FundAdapter(context, repository.getFund())
+        }
 
     }
 }
