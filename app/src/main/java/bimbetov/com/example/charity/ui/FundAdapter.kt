@@ -25,7 +25,7 @@ class FundAdapter(
     }
 
     override fun onBindViewHolder(holder: FundViewHolder, position: Int) {
-        holder.setInfo(item[position])
+        holder.setInfo(item[position], c)
         holder.binding.root.setOnClickListener {
             val intent = Intent(c, FundInfoActivity::class.java)
             c.startActivity(intent)

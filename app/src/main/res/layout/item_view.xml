@@ -16,8 +16,8 @@
 
         <ImageView
             android:id="@+id/fundImageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_margin="8dp"
             android:src="@mipmap/ic_launcher"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -62,11 +62,25 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
+        android:id="@+id/imagesInfo"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:src="@mipmap/ic_launcher"/>
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="centerCrop"/>
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:padding="8dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:lines="2"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
