@@ -28,10 +28,17 @@ class FundAdapter(
         holder.setInfo(item[position], c)
         holder.binding.root.setOnClickListener {
             val intent = Intent(c, FundInfoActivity::class.java)
+
+            intent.putExtra("FUND_NAME", item[position].getFundName())
+            intent.putExtra("FUND_IMG", item[position].getFundImg())
+            intent.putExtra("CITY", item[position].getCity())
+            intent.putExtra("IMAGE_INFO", item[position].imageList.toTypedArray())
+            intent.putExtra("NEEDED_AMOUNT", item[position].getNeedAmount())
+            intent.putExtra("COLLECTED_AMOUNT", item[position].getCollectedAmount())
+            intent.putExtra("TITLE_PROBLEM", item[position].getTitleProblem())
+            intent.putExtra("DESCRIPTION_PROBLEM", item[position].getDescriptionProblem())
+
             c.startActivity(intent)
-                /*putExtra(IMAGE_INFO, .getImage().toTypedArray())
-                putExtra(NEEDED_AMOUNT, needy.getNeededAmount())
-                putExtra(COLLECTED_AMOUNT, needy.getCollectedAmount())*/
         }
     }
 

@@ -3,6 +3,7 @@ package bimbetov.com.example.charity.model
 class Fund(
     private val fundName: String,
     private val fundImg: String,
+    private val city: String,
     private val titleProblem: String,
     private val needAmount: Int,
     private var collectedAmount: Int,
@@ -16,6 +17,10 @@ class Fund(
 
     fun getFundImg(): String {
         return fundImg
+    }
+
+    fun getCity(): String {
+        return city
     }
 
     fun getTitleProblem(): String {
