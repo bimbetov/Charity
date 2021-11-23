@@ -68,21 +68,21 @@ class FakeFundRepository : FundRepository{
 
     override fun getFund(): List<Fund> {
         return ArrayList<Fund>().apply {
-            add(Fund("Благотворительный фонд Любовь",imgLoveFund, "Москва",
-                "Феде нужно пройти обследование чтобы заговорить",
-                50_000,30_000, descriptionFedor, listImgFedor))
-            add(Fund("Фонд Все Все Вместе",imgVseVseVmesteFund,"Санкт-Петербург",
-                "Андрей нуждается в протезировании правой кисти!",
-                562_000,20_000, descriptionAlexey, listImgAlexey))
-            add(Fund("Фонд Сабиль", imgSabilFund, "Татарстан",
-                "Арслан нуждается в реабилитационном кресле!",
-                169_900, 1600, descriptionArslan, listImgArslan))
-            add(Fund("Фонд Дом Доброты", imgDomDobrotyFund, "Москва",
-                "У Сумаи цирроз печени. Необходимо обследование и лечение!",
-                100_000, 15_898, descriptionSumai, listImgSumai))
-            add(Fund("Фонд Свет", imgSvetFund, "Санкт-Петербург",
-                "Гурами нужно пройти обследования для контроля болезни",
-                55_000, 3500, descriptionGurami, listImgGurami))
+            add(Fund("Москва","Благотворительный фонд Любовь",imgLoveFund,
+                listImgFedor,"Феде нужно пройти обследование чтобы заговорить",
+                30_000,50_000, descriptionFedor))
+            add(Fund("Санкт-Петербург","Фонд Все Все Вместе",imgVseVseVmesteFund,
+                listImgAlexey,     "Андрей нуждается в протезировании правой кисти!",
+                20_000,562_000, descriptionAlexey))
+            add(Fund("Татарстан","Фонд Сабиль", imgSabilFund,
+                listImgArslan, "Арслан нуждается в реабилитационном кресле!",
+                1600,169_900, descriptionArslan))
+            add(Fund("Москва","Фонд Дом Доброты", imgDomDobrotyFund,
+                listImgSumai, "У Сумаи цирроз печени. Необходимо обследование и лечение!",
+                15_898,100_000, descriptionSumai))
+            add(Fund("Санкт-Петербург","Фонд Свет", imgSvetFund,
+                listImgGurami, "Гурами нужно пройти обследования для контроля болезни",
+                3500,55_000, descriptionGurami))
         }
     }
 }

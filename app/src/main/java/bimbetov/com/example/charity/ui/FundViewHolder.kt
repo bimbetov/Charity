@@ -24,6 +24,7 @@ class FundViewHolder(val binding: ItemViewBinding) : RecyclerView.ViewHolder(bin
 
         Glide
             .with(c)
+            //.load(fund.getNeedsImg())
             .load(fund.getImgList()[0])
             .centerCrop()
             .into(binding.imagesInfo)

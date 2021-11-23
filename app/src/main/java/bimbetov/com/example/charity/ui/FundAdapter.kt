@@ -33,6 +33,7 @@ class FundAdapter(
             intent.putExtra("FUND_IMG", item[position].getFundImg())
             intent.putExtra("CITY", item[position].getCity())
             intent.putExtra("IMAGE_INFO", item[position].imageList.toTypedArray())
+            //intent.putExtra("IMAGE_INFO", item[position].getNeedsImg())
             intent.putExtra("NEEDED_AMOUNT", item[position].getNeedAmount())
             intent.putExtra("COLLECTED_AMOUNT", item[position].getCollectedAmount())
             intent.putExtra("TITLE_PROBLEM", item[position].getTitleProblem())

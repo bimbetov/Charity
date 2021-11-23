@@ -23,6 +23,7 @@ class FundInfoActivity : AppCompatActivity() {
         binding.collectedAmount.text = intent.getIntExtra("COLLECTED_AMOUNT", 0).toString()
         binding.neededAmount.text = intent.getIntExtra("NEEDED_AMOUNT", 0).toString()
         var imgList = intent.getStringArrayExtra("IMAGE_INFO") as Array<String>
+        //var needsImg = intent.getStringExtra("IMAGE_INFO").toString()
 
         Glide
             .with(this)
@@ -32,6 +33,7 @@ class FundInfoActivity : AppCompatActivity() {
 
         Glide
             .with(this)
+            //.load(needsImg)
             .load(imgList[0])
             .centerCrop()
             .into(binding.imgNeedy)
