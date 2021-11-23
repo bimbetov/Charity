@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "840942814206",
+    "firebase_url": "https://charitydatabase-5d038-default-rtdb.firebaseio.com",
+    "project_id": "charitydatabase-5d038",
+    "storage_bucket": "charitydatabase-5d038.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840942814206:android:b3f50d0c1e4684e32976af",
+        "android_client_info": {
+          "package_name": "bimbetov.com.example.charity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "840942814206-6r3vpcrla6fcef4905gvaj6qboerbs31.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD69TywiBsyJknyPjCH89s5AjuaYdu2N2Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "840942814206-6r3vpcrla6fcef4905gvaj6qboerbs31.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
