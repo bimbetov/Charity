@@ -26,6 +26,11 @@ class FundAdapter(
 
     override fun onBindViewHolder(holder: FundViewHolder, position: Int) {
         holder.setInfo(item[position], c)
+        holder.binding.helpButton.setOnClickListener {
+            /*val myDialogFragment = MyDialogFragment()
+            val manger = supportFragmentManager
+                myDialogFragment.show(manger, "myDialog")*/
+        }
         holder.binding.root.setOnClickListener {
             val intent = Intent(c, FundInfoActivity::class.java)
 

@@ -38,6 +38,11 @@ class FundInfoActivity : AppCompatActivity() {
             .centerCrop()
             .into(binding.imgNeedy)
 
+        binding.helpBtnFromInfo.setOnClickListener {
+            val myDialogFragment = MyDialogFragment()
+            val manger = supportFragmentManager
+            myDialogFragment.show(manger, "myDialog")
+        }
 
 
     }

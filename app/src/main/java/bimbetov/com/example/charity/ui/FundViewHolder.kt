@@ -1,6 +1,9 @@
 package bimbetov.com.example.charity.ui
 
 import android.content.Context
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import bimbetov.com.example.charity.databinding.ItemViewBinding
 import bimbetov.com.example.charity.model.Fund
@@ -29,6 +32,9 @@ class FundViewHolder(val binding: ItemViewBinding) : RecyclerView.ViewHolder(bin
             .centerCrop()
             .into(binding.imagesInfo)
 
+        /*binding.helpButton.setOnClickListener {
+
+        }*/
     }
 
 
