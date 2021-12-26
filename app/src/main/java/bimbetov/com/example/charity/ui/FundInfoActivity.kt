@@ -89,6 +89,7 @@ class FundInfoActivity : AppCompatActivity() {
 
             } else {
                 Toast.makeText(this,"Вы не ввели сумму", Toast.LENGTH_LONG).show()
+                binding.donatAmount.requestFocus()
             }
 
         }
