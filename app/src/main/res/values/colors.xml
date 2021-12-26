@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="background">#C0CCC9</color>
+    <color name="availabilityBG">#2FB634</color>
 </resources>

@@ -26,14 +26,13 @@ class FundAdapter(
 
     override fun onBindViewHolder(holder: FundViewHolder, position: Int) {
         holder.setInfo(item[position], c)
-        holder.binding.helpButton.setOnClickListener {
-            /*val myDialogFragment = MyDialogFragment()
-            val manger = supportFragmentManager
-                myDialogFragment.show(manger, "myDialog")*/
-        }
+
         holder.binding.root.setOnClickListener {
             val intent = Intent(c, FundInfoActivity::class.java)
 
+            intent.putExtra("COLLECTION_AVAILABILITY", item[position].getCollectionAvailability())
+
+            intent.putExtra("ID", item[position].getId())
             intent.putExtra("FUND_NAME", item[position].getFundName())
             intent.putExtra("FUND_IMG", item[position].getFundImg())
             intent.putExtra("CITY", item[position].getCity())

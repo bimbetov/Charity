@@ -18,6 +18,7 @@ class FundViewHolder(val binding: ItemViewBinding) : RecyclerView.ViewHolder(bin
         binding.needCountTextView.text = fund.getNeedAmount().toString()
         binding.collectedCountTextView.text = fund.getCollectedAmount().toString()
         binding.titleTextView.text = fund.getTitleProblem()
+        binding.helpButton.text = fund.getCollectionAvailability().toString()
 
         Glide
             .with(c)

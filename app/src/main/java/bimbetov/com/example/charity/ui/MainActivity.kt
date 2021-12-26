@@ -28,17 +28,29 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        mDatabase = FirebaseDatabase.getInstance().getReference(FUND_KEY)
+
         getDataFromDB()
+
+        //setDataToDB()
 
         with(binding.recyclerView){
             layoutManager = LinearLayoutManager(context)
             adapter = FundAdapter(context, fundList)
         }
+    }
 
+    private fun setDataToDB() {
+        var repository : FundRepository = FakeFundRepository()
+        var list = repository.getFund()
+
+        for (f in list) {
+            mDatabase.child(f.getId().toString()).setValue(f)
+        }
     }
 
     private fun getDataFromDB() {
-        mDatabase = FirebaseDatabase.getInstance().getReference(FUND_KEY)
+
 
         mDatabase.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {

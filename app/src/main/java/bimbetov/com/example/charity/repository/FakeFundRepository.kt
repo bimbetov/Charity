@@ -68,21 +68,21 @@ class FakeFundRepository : FundRepository{
 
     override fun getFund(): List<Fund> {
         return ArrayList<Fund>().apply {
-            add(Fund("Москва","Благотворительный фонд Любовь",imgLoveFund,
+            add(Fund(1,"Москва","Благотворительный фонд Любовь",imgLoveFund,
                 listImgFedor,"Феде нужно пройти обследование чтобы заговорить",
-                30_000,50_000, descriptionFedor))
-            add(Fund("Санкт-Петербург","Фонд Все Все Вместе",imgVseVseVmesteFund,
+                30_000,50_000, descriptionFedor, "Помочь"))
+            add(Fund(2,"Санкт-Петербург","Фонд Все Все Вместе",imgVseVseVmesteFund,
                 listImgAlexey,     "Андрей нуждается в протезировании правой кисти!",
-                20_000,562_000, descriptionAlexey))
-            add(Fund("Татарстан","Фонд Сабиль", imgSabilFund,
+                20_000,562_000, descriptionAlexey, "Помочь"))
+            add(Fund(3,"Татарстан","Фонд Сабиль", imgSabilFund,
                 listImgArslan, "Арслан нуждается в реабилитационном кресле!",
-                1600,169_900, descriptionArslan))
-            add(Fund("Москва","Фонд Дом Доброты", imgDomDobrotyFund,
+                1600,169_900, descriptionArslan,"Помочь"))
+            add(Fund(4,"Москва","Фонд Дом Доброты", imgDomDobrotyFund,
                 listImgSumai, "У Сумаи цирроз печени. Необходимо обследование и лечение!",
-                15_898,100_000, descriptionSumai))
-            add(Fund("Санкт-Петербург","Фонд Свет", imgSvetFund,
+                15_898,100_000, descriptionSumai, "Помочь"))
+            add(Fund(5,"Санкт-Петербург","Фонд Свет", imgSvetFund,
                 listImgGurami, "Гурами нужно пройти обследования для контроля болезни",
-                3500,55_000, descriptionGurami))
+                3500,55_000, descriptionGurami, "Помочь"))
         }
     }
 }
